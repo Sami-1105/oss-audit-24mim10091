@@ -1,0 +1,17 @@
+#!/bin/bash
+# Checks if a package is installed
+
+PACKAGE=$1
+
+if dpkg -l | grep -q $PACKAGE; then
+    echo "$PACKAGE is installed"
+else
+    echo "$PACKAGE is not installed"
+fi
+
+case $PACKAGE in
+    python3) echo "Python language" ;;
+    apache2) echo "Web server" ;;
+    mysql) echo "Database system" ;;
+    vlc) echo "Media player" ;;
+esac
