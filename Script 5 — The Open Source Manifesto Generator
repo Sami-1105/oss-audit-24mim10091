@@ -1,0 +1,15 @@
+#!/bin/bash
+# Generates a manifesto
+
+read -p "Tool: " TOOL
+read -p "Freedom: " FREEDOM
+read -p "Build: " BUILD
+
+DATE=$(date)
+FILE="manifesto.txt"
+
+echo "I use $TOOL daily." > $FILE
+echo "Freedom means $FREEDOM." >> $FILE
+echo "I will build $BUILD." >> $FILE
+
+echo "Saved to $FILE"
